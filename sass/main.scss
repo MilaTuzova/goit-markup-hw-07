@@ -1,3 +1,1117 @@
+$primaryTextColor: #000000;
+$secondTextColor: #212121;
+$accentColor: #2196f3;
+$notactivColor: #757575;
+$primaryWhiteColor: #ffffff;
+$buttonColor: #f5f4fa;
+$footerBackgrColor: #2f303a;
+$socialColor: #afb1b8;
+$borderColor: #afb1b8;
+$borderColorZ: rgba(33, 33, 33, 0.2);
+$placeholderColor: rgba(117, 117, 117, 0.5);
+$cubicTime: cubic-bezier(0.4, 0, 0.2, 1);
+$timeDuration: 250ms;
+@import 'utils/variables';
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+.visually__hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
 body {
-    color: red;
+    font-family: Roboto, sans-serif;
+    font-style: normal;
+    letter-spacing: 0.03em;
+}
+
+.container {
+    width: 1200px;
+    margin: 0 auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+h1,
+h2,
+h3,
+ul,
+p,
+input {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: $secondTextColor;
+}
+
+li {
+    list-style-type: none;
+}
+
+
+/* шапка страницы*/
+
+.main-header {
+    background-color: $primaryWhiteColor;
+    border-bottom: 1px solid $buttonColor;
+}
+
+.main-header .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+ul.nav-link,
+ul.nav-info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+nav a.logo {
+    display: inline-block;
+    margin-right: 43px;
+}
+
+.logo {
+    padding-top: 24px;
+    padding-bottom: 25px;
+    font-family: Raleway, sans-serif;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.2;
+    color: $primaryTextColor;
+}
+
+.logo-color {
+    color: $accentColor;
+}
+
+.current {
+    color: $accentColor;
+}
+
+.nav-link .link {
+    display: inline-block;
+    margin-left: 50px;
+    padding-bottom: 32px;
+    padding-top: 32px;
+    transition: color $timeDuration $cubicTime;
+}
+
+..nav-link .link:first-child {
+    margin-left: 0;
+}
+
+.link-mail {
+    display: flex;
+    align-items: center;
+    width: 161px;
+    color: $notactivColor;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    transition: color $timeDuration $cubicTime;
+}
+
+.link-tel {
+    display: flex;
+    margin-left: 30px;
+    text-align: center;
+    width: 142px;
+    color: $notactivColor;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    transition: color $timeDuration $cubicTime;
+}
+
+.nav-link,
+.nav-info {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.2;
+    font-style: normal;
+    letter-spacing: 0.02em;
+}
+
+.icon-tel-sprite {
+    margin-right: 10px;
+    fill: $notactivColor;
+    transition: fill $timeDuration $cubicTime;
+}
+
+.icon-mail-sprite {
+    margin-right: 10px;
+    fill: $notactivColor;
+    transition: fill $timeDuration $cubicTime;
+}
+
+.menu-link {
+    position: relative;
+}
+
+.menu-link::after {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+    background-color: $accentColor;
+    opacity: 0;
+    transition: opacity $timeDuration $cubicTime;
+}
+
+
+/* ховер и фокус для телефона и почты в хедере*/
+
+.menu-link:focus::after,
+.menu-link:hover::after,
+.menu-link.current::after {
+    opacity: 1;
+}
+
+.link:hover,
+.link.current,
+.link:focus {
+    color: $accentColor;
+}
+
+.link:hover .icon-mail-sprite,
+.link:focus .icon-mail-sprite,
+.link:hover .icon-tel-sprite,
+.link:focus .icon-tel-sprite {
+    fill: $accentColor;
+}
+
+
+/* главная секция */
+
+.main-section {
+    text-align: center;
+    padding-top: 200px;
+    padding-bottom: 210px;
+    background-color: $footerBackgrColor;
+}
+
+.hero-container {
+    height: 600px;
+    max-width: 1600px;
+    margin-left: auto;
+    margin-right: auto;
+    background-image: linear-gradient( rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/img-hero.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.main-info.title {
+    display: block;
+    max-width: 696px;
+    margin: 0 auto;
+    font-weight: 900;
+    font-size: 44px;
+    line-height: 1.2;
+    color: $primaryWhiteColor;
+    letter-spacing: 0.06em;
+    text-align: center;
+    text-transform: uppercase;
+    padding-bottom: 30px;
+}
+
+.main-link {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    padding: 10px 32px;
+    min-width: 200px;
+    min-height: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.2;
+    letter-spacing: 0.06em;
+    text-align: center;
+    color: $primaryWhiteColor;
+    background-color: $accentColor;
+    transition: color $timeDuration $cubicTime;
+}
+
+.main-info .main-link {
+    text-align: center;
+}
+
+.main-link:hover,
+.main-link:focus {
+    color: $primaryTextColor;
+}
+
+
+/* секция приимущества студии */
+
+.section-list {
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
+
+.post-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.post-list-cards {
+    margin-right: 30px;
+}
+
+.post-list-cards:last-child {
+    margin-right: 0;
+}
+
+.post-list li {
+    width: 270px;
+}
+
+.post {
+    padding-bottom: 10px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.2;
+    color: $secondTextColor;
+    text-transform: uppercase;
+}
+
+.post-text {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 2;
+    color: $notactivColor;
+}
+
+.icon-cards {
+    width: 270px;
+    height: 120px;
+    background-color: $buttonColor;
+    border-radius: 4px;
+    margin-bottom: 33px;
+    background-position: center;
+}
+
+.icon-cards-item {
+    width: 70px;
+    height: 70px;
+    margin: 25px 100px;
+}
+
+
+/* секция карточек Чем занимаются и Команда*/
+
+.cards {
+    padding-bottom: 94px;
+}
+
+.list-cards {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+
+.list-cards-item {
+    display: block;
+    width: 370px;
+}
+
+.list-cards-block {
+    margin-right: 30px;
+}
+
+.list-cards-block:last-child {
+    margin-right: 0;
+}
+
+.card-text {
+    position: absolute;
+    bottom: 0px;
+    display: inline-block;
+    padding-top: 27px;
+    padding-bottom: 27px;
+    width: 370px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.2;
+    text-align: center;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: $primaryWhiteColor;
+    background-color: rgba(47, 48, 58, 0.8);
+}
+
+
+/* Секция НАША КОМАНДА */
+
+.team {
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
+
+.team-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 50px;
+}
+
+.team {
+    background-color: $buttonColor;
+}
+
+.team-list-block {
+    background-color: $primaryWhiteColor;
+    margin-right: 30px;
+    border-radius: 0px 0px 4px 4px;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.team-list-block:last-child {
+    margin-right: 0;
+}
+
+.cards-section {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.2;
+    color: $secondTextColor;
+    letter-spacing: 0.03em;
+    text-align: center;
+}
+
+.team-name {
+    padding-top: 30px;
+    padding-bottom: 10px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.2;
+    color: $secondTextColor;
+    letter-spacing: 0.03em;
+    text-align: center;
+}
+
+.team-name-class {
+    padding-bottom: 30px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.2;
+    color: $notactivColor;
+    letter-spacing: 0.03em;
+    text-align: center;
+}
+
+.team-list-img {
+    display: block;
+    width: 270px;
+}
+
+.list-icon {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 206px;
+    height: 44px;
+    margin: 0px 32px 30px;
+}
+
+.icon-social {
+    display: block;
+    width: 44px;
+    height: 44px;
+    margin-right: 10px;
+}
+
+.icon-social:last-child {
+    margin-right: 0px;
+}
+
+.icon-social-link {
+    display: block;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    padding: 12px 12px;
+    color: $socialColor;
+    transition: background-color $timeDuration $cubicTime;
+}
+
+.icon-item {
+    fill: currentColor;
+    transition: fill $timeDuration $cubicTime;
+}
+
+.icon-social-link:hover,
+.icon-social-link:focus {
+    background-color: $accentColor;
+}
+
+.icon-item:focus,
+.icon-item:hover {
+    fill: $primaryWhiteColor;
+}
+
+.icon-social-link:hover .icon-item,
+.icon-social-link:focus .icon-item {
+    fill: $primaryWhiteColor;
+}
+
+
+/* Наши клиенты */
+
+.client {
+    padding-top: 87px;
+    padding-bottom: 94px;
+}
+
+.cards-section {
+    padding-bottom: 50px;
+}
+
+.client-name {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 90px;
+}
+
+.client-name-card {
+    display: block;
+    width: 170px;
+    height: 90px;
+    margin-right: 30px;
+}
+
+.client-name-card:last-child {
+    margin-right: 0;
+}
+
+.button-client {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 170px;
+    height: 90px;
+    cursor: pointer;
+    border: 1px solid $socialColor;
+    border-radius: 4px;
+    transition: border $timeDuration $cubicTime;
+}
+
+.client-icon {
+    fill: $socialColor;
+    transition: fill $timeDuration $cubicTime;
+}
+
+.button-client:hover .client-icon,
+.button-client:focus .client-icon {
+    fill: $accentColor;
+}
+
+.button-client:focus,
+.button-client:hover {
+    border-color: $accentColor;
+}
+
+
+/* подвал или футер*/
+
+.footer {
+    display: block;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background-color: $footerBackgrColor;
+    font-style: normal;
+}
+
+.footer .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.logo-footer {
+    display: inline-block;
+    padding-bottom: 20px;
+    font-family: Raleway, sans-serif;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.2;
+    color: $primaryWhiteColor;
+}
+
+.logo-color {
+    color: $accentColor;
+}
+
+.address {
+    display: inline-block;
+    padding-bottom: 9px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 2;
+    color: $primaryWhiteColor;
+}
+
+.footer-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-info-mail:hover,
+.footer-info-mail:focus,
+.footer-info-tel:hover,
+.footer-info-tel:focus {
+    color: $accentColor;
+}
+
+.footer-info-mail,
+.footer-info-tel {
+    display: inline-block;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 2;
+    color: $notactivColor;
+    transition: color $timeDuration $cubicTime;
+}
+
+.footer-info-mail {
+    padding-bottom: 9px;
+}
+
+.footer-prime {
+    margin-right: 70px;
+}
+
+.footer-social {
+    display: flex;
+    flex-direction: column;
+}
+
+.icon-item-footer {
+    fill: $primaryWhiteColor;
+}
+
+.icon-social-link.footer-social {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.icon-social-link.footer-social:hover,
+.icon-social-link.footer-social:focus {
+    background-color: $accentColor;
+}
+
+.footer-case {
+    margin: 0;
+}
+
+.footer-social .footer-info {
+    padding-bottom: 20px;
+    margin-top: 12px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.2;
+    text-transform: uppercase;
+    color: $primaryWhiteColor;
+}
+
+
+/* футер подписаться */
+
+.footer-form {
+    display: block;
+    width: 570px;
+    height: 86px;
+    margin-left: 93px;
+    margin-top: 12px;
+}
+
+.form-field-email {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.email-label {
+    margin-bottom: 20px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.2;
+    text-transform: uppercase;
+    color: $primaryWhiteColor;
+}
+
+.email-input {
+    width: 358px;
+    height: 50px;
+    color: $primaryTextColor;
+    background-color: $footerBackgrColor;
+    border: 1px solid $notactivColor;
+    border-radius: 4px;
+    padding: 15px 16px;
+    transition: background-color $timeDuration $cubicTime, border $timeDuration $cubicTime;
+}
+
+.footer-field {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+}
+
+.button-field {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 12px;
+    padding: 10px 28px 10px 29px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.875;
+    letter-spacing: 0.06em;
+    width: 200px;
+    height: 50px;
+    cursor: pointer;
+    border: 1px solid $accentColor;
+    border-radius: 4px;
+    background-color: $accentColor;
+    color: $buttonColor;
+    transition: color $timeDuration $cubicTime;
+}
+
+.button-field:focus,
+.button-field:hover {
+    background-color: $buttonColor;
+    color: $accentColor;
+    border: 1px solid $buttonColor;
+}
+
+.fiel-mail-sprite {
+    fill: currentColor;
+}
+
+
+/* Страница ПОРТФОЛИО */
+
+.portfolio {
+    padding-top: 95px;
+    padding-bottom: 94px;
+}
+
+.portfolio-button {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.portfolio-button-item:not(:last-child) {
+    margin-right: 8px;
+}
+
+.portfolio-button-item button {
+    display: inline-block;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    padding: 6px 22px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.6;
+    color: $primaryTextColor;
+    letter-spacing: 0.03em;
+    text-align: center;
+    background-color: $buttonColor;
+    transition: background-color $timeDuration $cubicTime, color $timeDuration $cubicTime;
+}
+
+button:hover,
+button:focus {
+    color: $primaryWhiteColor;
+    background-color: $accentColor;
+}
+
+
+/* Портфолио карточки */
+
+.portfolio-card {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+/* li карточек */
+
+.portfolio-card-item {
+    position: relative;
+    display: block;
+    margin-right: 30px;
+    margin-bottom: 30px;
+}
+
+.portfolio-card-item:nth-child(3n) {
+    margin-right: 0px;
+}
+
+.portfolio-card-item:nth-last-child(-n + 3) {
+    margin-bottom: 0;
+}
+
+.portfolio-card-item:hover,
+.portfolio-card-item:focus {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+    transition: box-shadow $timeDuration $cubicTime;
+}
+
+.portfolio-card-item img {
+    display: block;
+    width: 370px;
+}
+
+
+/* div карточек */
+
+.button-about {
+    width: 370px;
+    padding: 20px 24px;
+    border: 1px solid $buttonColor;
+    border-top: 0;
+}
+
+.portfolio-card-title {
+    padding-bottom: 4px;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 2;
+    letter-spacing: 0.06em;
+}
+
+.portfolio-card-more {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.9;
+    color: $notactivColor;
+}
+
+
+/* анимация карточек в портфолио */
+
+.overlay-box {
+    position: relative;
+    overflow: hidden;
+}
+
+.overlay-text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: inline-block;
+    width: 370px;
+    height: 294px;
+    padding: 63px 24px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.6;
+    color: $primaryWhiteColor;
+    background-color: rgba(33, 150, 243, 0.9);
+    transform: translateY(100%);
+    transition: transform $timeDuration $cubicTime;
+    pointer-events: none;
+}
+
+.portfolio-card-item:focus .overlay-text,
+.portfolio-card-item:hover .overlay-text {
+    transform: translateY(0);
+}
+
+
+/* Модалка */
+
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    opacity: 1;
+    transition: opacity $timeDuration $cubicTime;
+}
+
+.backdrop.is-hidden {
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+    transition: $timeDuration $cubicTime;
+}
+
+.modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+    transition: opacity $timeDuration $cubicTime, transform $timeDuration $cubicTime;
+    min-width: 528px;
+    min-height: 581px;
+    background-color: $primaryWhiteColor;
+    border-radius: 4px;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.backdrop.is-hidden .modal {
+    transform: translate(-50%, -50%) scale(0.5);
+    opacity: 0;
+}
+
+button.button-modal {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    width: 30px;
+    height: 30px;
+    border: 1px solid $socialColor;
+    border-radius: 50%;
+    fill: $primaryTextColor;
+    background-color: $primaryWhiteColor;
+    transition: fill $timeDuration $cubicTime;
+}
+
+.button-modal:hover .modal-icon-item,
+.button-modal:focus .modal-icon-item {
+    fill: $accentColor;
+}
+
+
+/* форма оставьте свои данные */
+
+.modal-field {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 528px;
+    height: 581px;
+    padding: 37px 41px 43px 39px;
+}
+
+.modal-text {
+    margin-bottom: 2px;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.2;
+    text-align: center;
+}
+
+.form {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.input-form {
+    position: relative;
+    width: 448px;
+    height: 40px;
+    padding-left: 42px;
+    cursor: pointer;
+    border: 1px solid $borderColor;
+    border-radius: 4px;
+    transition: border-color $timeDuration $cubicTime;
+}
+
+.form:hover .input-form,
+.form:focus .input-form {
+    border-color: $accentColor;
+}
+
+.label-name {
+    margin-top: 10px;
+    margin-bottom: 4px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.1666;
+    letter-spacing: 0.01em;
+    color: $notactivColor;
+}
+
+.modal-card {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transform: translate(12px, -11px);
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+    fill: $primaryTextColor;
+    transition: fill $timeDuration $cubicTime;
+}
+
+.form:focus-within .modal-card,
+.form:hover .modal-card {
+    fill: $accentColor;
+}
+
+.modal-card:hover,
+.modal-card:focus {
+    fill: $accentColor;
+}
+
+.form-textarea {
+    width: 448px;
+    height: 120px;
+    margin-bottom: 20px;
+    border: 1px solid $borderColor;
+    border-radius: 4px;
+    resize: none;
+    padding: 16px 16px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.1428;
+    letter-spacing: 0.01em;
+    transition: border-color $timeDuration $cubicTime;
+}
+
+.form-textarea::placeholder {
+    color: $placeholderColor;
+    transition: color $timeDuration $cubicTime;
+}
+
+.form-textarea:hover,
+.form-textarea:focus {
+    border-color: $accentColor;
+}
+
+.form:hover .form-textarea::placeholder,
+.form:focus-within .form-textarea::placeholder {
+    color: $accentColor;
+}
+
+
+/* чекбокс */
+
+.agreement {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 423px;
+    height: 24px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.checkbox {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+}
+
+.label-checkbox {
+    width: 423px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.7;
+    color: $notactivColor;
+    padding-left: 19px;
+}
+
+.doc {
+    color: $accentColor;
+    text-decoration: underline;
+}
+
+.modal-card-check {
+    position: absolute;
+    top: 4px;
+    left: 0;
+    width: 16px;
+    height: 15px;
+    background-color: $primaryWhiteColor;
+    fill: $primaryWhiteColor;
+    border: 2px solid $primaryTextColor;
+    border-radius: 2px;
+    transition: background-color v $timeDuration $cubicTime, border-color $timeDuration $cubicTime;
+}
+
+.checkbox:checked+.modal-card-check {
+    background-color: $accentColor;
+    border-color: $accentColor;
+}
+
+.checkbox:focus+.modal-card-check,
+.checkbox:hover+.modal-card-check {
+    border-color: $accentColor;
+}
+
+.button-modal-send {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    padding: 10px 55px 10px 56px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.875;
+    letter-spacing: 0.06em;
+    width: 200px;
+    height: 50px;
+    cursor: pointer;
+    border: 1px solid $accentColor;
+    border-radius: 4px;
+    background-color: $accentColor;
+    color: $buttonColor;
+    transition: color $timeDuration $cubicTime, color $timeDuration $cubicTime;
+}
+
+.button-modal-send:focus,
+.button-modal-send:hover {
+    color: $primaryTextColor;
 }

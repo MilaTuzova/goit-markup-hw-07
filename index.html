@@ -60,7 +60,7 @@
         <!--Секция приимущества студии-->
         <section class="section-list">
             <div class="container">
-                <h2 class="visually-hidden"> Наши приимущества:</h2>
+                <h2 class="visually__hidden">Наши приимущества:</h2>
                 <ul class="post-list">
                     <li class="post-list-cards">
                         <div class="icon-cards">
@@ -486,28 +486,28 @@
     <script>
         (() => {
             const refs = {
-                openModalBtn: document.querySelector('[data-modal-open]'),
-                closeModalBtn: document.querySelector('[data-modal-close]'),
-                modal: document.querySelector('[data-modal]'),
+                openModalBtn: document.querySelector("[data-modal-open]"),
+                closeModalBtn: document.querySelector("[data-modal-close]"),
+                modal: document.querySelector("[data-modal]"),
             };
 
-            refs.openModalBtn.addEventListener('click', toggleModal);
-            refs.closeModalBtn.addEventListener('click', toggleModal);
+            refs.openModalBtn.addEventListener("click", toggleModal);
+            refs.closeModalBtn.addEventListener("click", toggleModal);
 
             function toggleModal() {
-                refs.modal.classList.toggle('is-hidden');
+                refs.modal.classList.toggle("is-hidden");
             }
         })();
     </script>
     <script>
         (() => {
             document
-                .querySelector('.js-speaker-form')
-                .addEventListener('submit', e => {
+                .querySelector(".js-speaker-form")
+                .addEventListener("submit", (e) => {
                     e.preventDefault();
 
                     new FormData(e.currentTarget).forEach((value, name) =>
-                        console.log('${name}: ${value}'),
+                        console.log("${name}: ${value}")
                     );
                 });
         })();
