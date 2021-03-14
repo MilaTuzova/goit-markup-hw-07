@@ -2,6 +2,7 @@
 
 .team-section {
     padding-bottom: 94px;
+    padding-top: 94px;
     background-color: var(--button-color);
 }
 
@@ -9,7 +10,6 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding-top: 50px;
 }
 
 .team {
@@ -48,6 +48,9 @@
     text-align: center;
 }
 
+
+/* соцсети в команде */
+
 .list-icon {
     display: flex;
     flex-direction: row;
@@ -82,14 +85,10 @@
 }
 
 .icon-social__item {
-    fill: currentColor;
+    fill: var(--social-color);
     transition: fill var(--time-duration) var(--cubic-time);
-    &:focus,
-    &:hover {
-        fill: var(--primary-white-color);
-    }
-    .icon-social-link:hover &,
-    .icon-social-link:focus & {
+    .icon-social__link:hover &,
+    .icon-social__link:focus & {
         fill: var(--primary-white-color);
     }
 }

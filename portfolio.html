@@ -12,7 +12,7 @@
 </head>
 
 <body>
-    <!--Содержание сайта-->
+    <!--header section Содержание сайта-->
     <header class="header">
         <div class="container container__header">
             <!--Основная навигация сайта-->
@@ -52,29 +52,37 @@
 
     <!--секция портфолио-->
     <main>
-        <!--список ссылок на перечень работ-->
+        <!--portfolio section список ссылок на перечень работ-->
         <section class="portfolio">
             <div class="container">
                 <h1 class="visually-hidden">Ссылки на работы Веб Студии</h1>
-                <!--Кнопки Портфолио-->
+                <!--Button in portfolio Кнопки Портфолио-->
                 <ul class="portfolio-button">
                     <li class="portfolio-button__item">
                         <button type="button " class="portfolio-button__text">Все</button>
                     </li>
                     <li class="portfolio-button__item">
-                        <button type="button " class="portfolio-button__text">Веб-сайты</button>
+                        <button type="button " class="portfolio-button__text">
+                Веб-сайты
+              </button>
                     </li>
                     <li class="portfolio-button__item">
-                        <button type="button " class="portfolio-button__text">Приложения</button>
+                        <button type="button " class="portfolio-button__text">
+                Приложения
+              </button>
                     </li>
                     <li class="portfolio-button__item">
-                        <button type="button" class="portfolio-button__text">Дизайн</button>
+                        <button type="button" class="portfolio-button__text">
+                Дизайн
+              </button>
                     </li>
                     <li class="portfolio-button__item">
-                        <button type="button " class="portfolio-button__text">Маркетинг</button>
+                        <button type="button " class="portfolio-button__text">
+                Маркетинг
+              </button>
                     </li>
                 </ul>
-                <!--Карточки Портфолио-->
+                <!--cards of portfilio Карточки Портфолио-->
                 <ul class="portfolio-card">
                     <li class="portfolio-card__item">
                         <div class="overlay">
@@ -96,9 +104,7 @@
                             </p>
                         </div>
                         <div class="about">
-                            <h3 class="about__title">
-                                Постер New Orlean vs Golden Star
-                            </h3>
+                            <h3 class="about__title">Постер New Orlean vs Golden Star</h3>
                             <p class="about__text">Дизайн</p>
                         </div>
                     </li>
@@ -191,22 +197,22 @@
         </section>
     </main>
 
-    <!--Подвал страницы или футер-->
+    <!--footer section Подвал страницы или футер-->
     <footer class="footer">
-        <div class="container">
-            <div class="footer-prime">
-                <a class="logo-footer" href="./index.html "><span class="logo-color">Web</span>Studio</a
+        <div class="container footer-container">
+            <div class="footer-logo">
+                <a class="footer-logo__link" href="./index.html "><span class="footer-logo__link--color">Web</span>Studio</a
           >
-          <address class="address-main">
-            <p class="address">г. Киев, пр-т Леси Украинки, 26</p>
+          <address class="address">
+            <p class="address__text">г. Киев, пр-т Леси Украинки, 26</p>
             <ul class="footer-info">
               <li>
-                <a class="footer-info-mail" href="mailto:info@example.com.com "
+                <a class="footer-info__mail" href="mailto:info@example.com.com "
                   >info@example.com</a
                 >
               </li>
               <li>
-                <a class="footer-info-tel" href="tel:+380991111111 "
+                <a class="footer-info__tel" href="tel:+380991111111 "
                   >+38 099 111 11 11</a
                 >
               </li>
@@ -215,37 +221,37 @@
         </div>
 
         <!--футер соцсети-->
-        <div class="footer-social">
-          <p class="footer-info">присоединяйтесь</p>
-          <ul class="list-icon footer-case">
-            <li class="icon-social">
+        <div class="footer-join">
+          <p class="footer-join__text">присоединяйтесь</p>
+          <ul class="footer-social__list">
+            <li class="footer-social">
               <a
-                class="icon-social__link footer-social"
+                class="footer-social__link"
                 href="https://www.instagram.com"
                 title="Instagram"
               >
-                <svg class="icon-item-footer" width="20" height="20">
+                <svg class="footer-social__item" width="20" height="20">
                   <use href="./images/icons.svg#icon-instagram"></use>
                 </svg>
               </a>
                 </li>
-                <li class="icon-social">
-                    <a class="icon-social__link footer-social" href="https://www.twitter.com" title="Twitter">
-                        <svg class="icon-item-footer" width="20" height="20">
+                <li class="footer-social">
+                    <a class="footer-social__link" href="https://www.twitter.com" title="Twitter">
+                        <svg class="footer-social__item" width="20" height="20">
                   <use href="./images/icons.svg#icon-twitter"></use>
                 </svg>
                     </a>
                 </li>
-                <li class="icon-social">
-                    <a class="icon-social__link footer-social" href="https://www.facebook.com" title="Facebook">
-                        <svg class="icon-item-footer" width="20" height="20">
+                <li class="footer-social">
+                    <a class="footer-social__link" href="https://www.facebook.com" title="Facebook">
+                        <svg class="footer-social__item" width="20" height="20">
                   <use href="./images/icons.svg#icon-facebook"></use>
                 </svg>
                     </a>
                 </li>
-                <li class="icon-social">
-                    <a class="icon-social__link footer-social" href="https://www.linkedin.com" title="Linkedin">
-                        <svg class="icon-item-footer" width="20" height="20">
+                <li class="footer-social">
+                    <a class="footer-social__link" href="https://www.linkedin.com" title="Linkedin">
+                        <svg class="footer-social__item" width="20" height="20">
                   <use href="./images/icons.svg#icon-in"></use>
                 </svg>
                     </a>
@@ -254,16 +260,16 @@
             </div>
             <!--футер подпишись-->
             <div class="footer-form">
-                <form class="footer-field" autocomplete="on">
-                    <div class="form-field-email">
-                        <label for="email" class="email-label">
+                <form class="footer-form__field" autocomplete="on">
+                    <div class="field-email">
+                        <label for="email" class="field-email__text">
                 Подпишитесь на рассылку
               </label>
-                        <input class="email-input" type="text" id="email" name="email " placeholder="E-mail" />
+                        <input class="field-email__input" type="text" id="email" name="email " placeholder="E-mail" />
                     </div>
                     <button type="submit" class="button-field">
               Подписаться
-              <svg class="fiel-mail-sprite" width="24" height="24">
+              <svg class="field-mail-sprite" width="24" height="24">
                 <use href="./images/icons.svg#field"></use>
               </svg>
             </button>

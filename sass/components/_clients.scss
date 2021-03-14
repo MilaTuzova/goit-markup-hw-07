@@ -2,6 +2,7 @@
 
 .clients-section {
     padding-bottom: 94px;
+    padding-top: 94px;
 }
 
 .clients-list {
@@ -30,7 +31,8 @@
     cursor: pointer;
     border: 1px solid var(--social-color);
     border-radius: 4px;
-    transition: border var(--time-duration) var(--cubic-time) &:focus,
+    transition: border var(--time-duration) var(--cubic-time);
+    &:focus,
     &:hover {
         border-color: var(--accent-color);
     }
